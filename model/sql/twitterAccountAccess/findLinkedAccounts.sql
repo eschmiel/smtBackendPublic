@@ -1,0 +1,1 @@
+SELECT account_id FROM account_access WHERE user_id = $(user_id);
