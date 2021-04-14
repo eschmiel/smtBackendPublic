@@ -1,0 +1,16 @@
+"use strict";
+var express = require('express');
+var router = express.Router();
+var body = require('express-validator').body;
+var path = require('path');
+var configPath = path.join(process.cwd(), 'built', 'configs', 'mainConfig');
+var config = require(configPath);
+var accountController = require(config.modulePaths.accountController);
+router.get('/getLinkedAccounts', accountController.getLinkedAccounts);
+router.get('/getUsername', accountController.getUsername);
+router.post('/createUserAccount', body('username').trim().escape(), body('password').trim().escape(), accountController.createUserAccount);
+router.post('/deleteUserAccount', accountController.deleteUserAccount);
+router.get('/linkTwitterAccount', accountController.generateTwitterAuthorizationLink);
+router.get('/finishTwitterAuthorization', accountController.finishTwitterAuthorization);
+router.post('/unlinkTwitterAccount', accountController.unlinkTwitterAccount);
+module.exports = router;

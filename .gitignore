@@ -1,5 +1,1 @@
-# We mainly need to make sure our Twitter API keys are not stored on Github
-# and our database connection information
-
-model/services/message/twitterAppKeys.js
-model/database.js
+.env

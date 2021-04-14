@@ -1,0 +1,14 @@
+"use strict";
+var path = require('path');
+var configPath = path.join(process.cwd(), 'built', 'configs', 'mainConfig');
+var config = require(configPath);
+var express = require('express');
+var router = express.Router();
+var tweetController = require(config.modulePaths.tweetController);
+var _a = require('express-validator'), body = _a.body, param = _a.param;
+router.get('/getUserTweets', param('post_id').isNumeric().trim().escape(), tweetController.getUserTweets);
+router.post('/createTweet', body('username').trim().escape(), body('account_id').trim().escape(), body('tweet_title').trim().escape(), body('tweet_text').trim().escape(), tweetController.createTweet);
+router.post('/editTweet/:post_id', body('account_id').trim().escape(), body('tweet_title').trim().escape(), body('tweet_text').trim().escape(), param('post_id').isNumeric().trim().escape(), tweetController.editTweet);
+router.post('/toggleTweet/:post_id', param('post_id').isNumeric().trim().escape(), tweetController.toggleTweet);
+router.post('/deleteTweet/:post_id', param('post_id').isNumeric().trim().escape(), tweetController.deleteTweet);
+module.exports = router;
