@@ -1,1 +1,0 @@
-INSERT INTO account_access VALUES ($(account_id), $(user_id));

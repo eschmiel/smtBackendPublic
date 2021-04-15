@@ -1,1 +1,0 @@
-SELECT account_id FROM twitter_accounts WHERE twitter_id = $(twitter_id);

@@ -1,1 +1,0 @@
-SELECT tweet_id FROM active_tweets WHERE post_id = $(post_id);

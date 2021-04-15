@@ -1,1 +1,0 @@
-INSERT INTO active_tweets VALUES ($(post_id), $(tweet_id));

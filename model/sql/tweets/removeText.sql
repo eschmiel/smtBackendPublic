@@ -1,1 +1,0 @@
-DELETE FROM tweet_text_content WHERE post_id = $<dto.post>;
