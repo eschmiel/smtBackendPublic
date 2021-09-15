@@ -1,0 +1,1 @@
+INSERT INTO twitter_accounts (access_token, access_token_secret, twitter_id) VALUES ($(access_token), $(access_token_secret), $(twitter_id)) RETURNING account_id;

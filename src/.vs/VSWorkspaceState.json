@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\configs",
+    "\\model\\dto",
+    "\\model\\dto\\accounts",
+    "\\model\\managers",
+    "\\model\\services",
+    "\\model\\services\\login",
+    "\\model\\services\\verification"
+  ],
+  "SelectedNode": "\\package.json",
+  "PreviewInSolutionExplorer": false
+}

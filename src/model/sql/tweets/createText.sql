@@ -1,0 +1,1 @@
+INSERT INTO tweet_text_content VALUES ($(post_id), $(tweet_text));
